@@ -44,7 +44,7 @@ public class Attende extends Person {
         if (o == null || getClass() != o.getClass()) return false;
         Attende attende = (Attende) o;
         if (!super.equals(o)) return false;
-        if (!((Double) salary).equals(attende.salary)) return false;
+        if ( salary != attende.salary) return false;
         if (!birthdate.equals(attende.birthdate)) return false;
         return gender != null ? gender.equals(attende.gender) : attende.gender == null;
     }
