@@ -28,10 +28,20 @@ public class Conference {
         this.instructorId = instructorId;
         this.sponsorId = sponsorId;
         this.attendeesAverageAge = 0;
-
         this.attendeesAverageSalary = 0;
         this.womenNumber = 0;
         this.menNumber = 0;
+    }
+    public Conference(Date confDate, String topic, String address, int instructorId, int sponsorId, int attendeesAverageAge, double attendeesAverageSalary, int womenNumber, int menNumber){
+        this.confDate = confDate;
+        this.topic = topic;
+        this.address = address;
+        this.instructorId = instructorId;
+        this.sponsorId = sponsorId;
+        this.attendeesAverageAge = attendeesAverageAge;
+        this.attendeesAverageSalary = attendeesAverageSalary;
+        this.womenNumber = womenNumber;
+        this.menNumber = menNumber;
     }
 
     public String getTopic() {
