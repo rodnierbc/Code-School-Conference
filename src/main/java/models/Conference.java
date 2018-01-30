@@ -3,7 +3,7 @@ import java.util.Date;
 
 public class Conference {
     private int id;
-    private Date confDate;
+    private String confDate;
     private String topic;
     private String address;
     private int instructorId;
@@ -21,7 +21,7 @@ public class Conference {
         this.sponsorId = sponsorId;
     }
 
-    public Conference(Date confDate, String topic, String address, int instructorId, int sponsorId){
+    public Conference(String confDate, String topic, String address, int instructorId, int sponsorId){
         this.confDate = confDate;
         this.topic = topic;
         this.address = address;
@@ -32,7 +32,16 @@ public class Conference {
         this.womenNumber = 0;
         this.menNumber = 0;
     }
-    public Conference(Date confDate, String topic, String address, int instructorId, int sponsorId, int attendeesAverageAge, double attendeesAverageSalary, int womenNumber, int menNumber){
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public Conference(String confDate, String topic, String address, int instructorId, int sponsorId, int attendeesAverageAge, double attendeesAverageSalary, int womenNumber, int menNumber){
         this.confDate = confDate;
         this.topic = topic;
         this.address = address;
@@ -52,11 +61,11 @@ public class Conference {
         this.topic = topic;
     }
 
-    public Date getConfDate() {
+    public String getConfDate() {
         return confDate;
     }
 
-    public void setConfDate(Date confDate) {
+    public void setConfDate(String confDate) {
         this.confDate = confDate;
     }
 

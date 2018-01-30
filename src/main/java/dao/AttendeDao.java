@@ -11,6 +11,6 @@ public interface AttendeDao {
     List<Attende> getAll();
     List<Attende> getAllAttendeesForConference(int conferenceId);
     Attende findById(int id);
-    void update(int id, String name, String email, String phone, double salary, Date birthdate, String gender);
+    void update(int id, String name, String email, String phone, double salary, String birthdate, String gender);
     void deleteById(int id);
 }

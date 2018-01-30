@@ -4,10 +4,10 @@ import java.util.Objects;
 
 public class Attende extends Person {
     private double salary;
-    private Date birthdate;
+    private String birthdate;
     private String gender;
 
-    public Attende(String name, String email, String phone, double salary, Date birthdate, String gender){
+    public Attende(String name, String email, String phone, double salary, String birthdate, String gender){
         super(name, email, phone);
         this.salary = salary;
         this.birthdate = birthdate;
@@ -22,11 +22,11 @@ public class Attende extends Person {
         this.salary = salary;
     }
 
-    public Date getBirthdate() {
+    public String getBirthdate() {
         return birthdate;
     }
 
-    public void setBirthdate(Date birthdate) {
+    public void setBirthdate(String birthdate) {
         this.birthdate = birthdate;
     }
 
