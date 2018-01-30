@@ -9,7 +9,7 @@ public interface ConferenceDao {
     void add (Conference conference);
     List<Conference> getAll();
     List<Conference> getAllConferencesForAttendees(int attendeId);
-    Attende findById(int id);
+    Conference findById(int id);
     void update(int id, Date confDate, String topic, String address, int instructorId, int sponsorId, int attendeesAverageAge, double attendeesAverageSalary, int womenNumber, int menNumber);
     void deleteById(int id);
 }

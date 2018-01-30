@@ -65,4 +65,21 @@ public class Sql2oAttendeDaoTest {
         String testDate = "02/04/2018";
         return new Conference(testDate, "Topic", "address", 1,1 );
     }
+    @Test
+    public void deleteingAttendeAlsoUpdatesJoinTable() throws Exception {
+        Conference testConference = setupConference();
+        conferenceDao.add(testConference);
+        Attende otherAttende = setupAttende();
+        Attende testAttende = setupAttende();
+        attendeDao.add(testAttende);
+        attendeDao.addAttendeToConference(testAttende, testConference);
+        attendeDao.addAttendeToConference(otherAttende, testConference);
+        attendeDao.deleteById(testAttende.getId());
+        assertEquals(1, attendeDao.getAllAttendeesForConference(testConference.getId()).size());
+    }
+
+
+
+
+
 }

@@ -47,8 +47,12 @@ public class Sql2oConferenceDao implements ConferenceDao {
     }
 
     @Override
-    public Attende findById(int id) {
-        return null;
+    public Conference findById(int id) {
+        try(Connection con = sql2o.open()){
+            return con.createQuery("SELECT * FROM conferences WHERE id = :id")
+                    .addParameter("id", id)
+                    .executeAndFetchFirst(Conference.class);
+        }
     }
 
     @Override
