@@ -4,18 +4,15 @@
 
 This API allows controlling some interesting data between the conferences and who attend, besides calculating certain statistics about the people who attend.
 
-### Specs
-| Behavior | Input | Expected Behavior |
-| :------------- | :------------- | :------------- |
-| | | |
-
+### Data Base model
+![alt text](https://raw.githubusercontent.com/username/Code-School-Conference/master/img/db.png)
 
 ## Setup/Installation Requirements
 
 * Install the latest Java JDK and JRE
 * Install an IDE - preferably IntelliJ IDEA
 * clone this repo. <br />
-`$ git clone https://github.com/rodnierbc/animal-shelter.git`
+`$ git clone https://github.com/rodnierbc/Code-School-Conference.git`
 * Open the project event-planning in your IDE <br />
 * Build and Run the project using your IDE
 
